@@ -4,7 +4,7 @@ width = love.graphics.getWidth()
 height = love.graphics.getHeight()
 unit = math.floor(width/30)
 radius = unit/2.5
-reswapCost = 50
+reswapCost = 200
 updateCost = 100
 
 function string:split(delimiter)
