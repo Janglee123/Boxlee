@@ -1,4 +1,4 @@
-restart = {}
+restart  = scene:new()
 
 function restart:load()
     self.replayFont = love.graphics.newFont('asset/fonts/Quicksand-Regular.ttf', unit*5)

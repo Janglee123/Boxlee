@@ -1,4 +1,4 @@
-store = {}
+store  = scene:new()
 function store:load()
     self.textFont = love.graphics.newFont('asset/fonts/Quicksand-Medium.ttf', unit*2)
     self.homeFont = love.graphics.newFont('asset/fonts/Quicksand-Regular.ttf', unit*1.5)

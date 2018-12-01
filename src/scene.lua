@@ -1,12 +1,18 @@
-scenes = {}
+scene = {}
 
-function scenes:load()
-    local files = love.filesystem.getDirectoryItems( 'src/scenes/' );
-    for k, file in ipairs(files) do
-        sname = string.gsub(file,'.lua','')
-        scenes[sname] = require ('src/scenes/'..sname)
-        scenes[sname]:load()
-    end
+function scene:new()
+  local newScene = {}
+  setmetatable(newScene, self)
+  self.__index = self
+
+  return newScene
 end
 
-return scenes
+
+function scene:load() end
+function scene:update(dt) end
+function scene:onEvent(e) end
+function scene:draw() end
+function scene:reset() end
+
+return scene

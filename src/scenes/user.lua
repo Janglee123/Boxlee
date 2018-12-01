@@ -1,4 +1,4 @@
-setting = {}
+setting  = scene:new()
 
 function setting:load()
     self.userFont = love.graphics.newFont('asset/fonts/Quicksand-Regular.ttf', unit*2)

@@ -1,5 +1,5 @@
 event = require 'src/event'
-game = {}
+game = scene:new()
 
 function isBetween(a,b,c)
   return ( a <= c and a >= b )

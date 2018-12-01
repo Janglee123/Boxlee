@@ -1,34 +1,30 @@
 --manages scenes and etc
+sm = require 'src/sceneManager'
 coin = require 'src/objects/coin'
 user = require 'src/user'
 engine = {}
 
-function changeSceneTo(scene)
-    engine.currentScene = scene
-    engine.scenes[scene]:reset()
-end
 
 function engine:load()
-    self.scenes = require 'src/scene'
     user:load()
     coin:load()
-    self.scenes:load()
+    sm:load()
 
     if user.highscore == 0 then
-        changeSceneTo('user')
+        sm:changeSceneTo('user')
     else
-        changeSceneTo('home')
+        sm:changeSceneTo('home')
     end
 
 end
 
 function engine:update(dt)
-    self.scenes[ self.currentScene ]:update(dt)
+    sm:update(dt)
     coin:update(dt)
 end
 
 function engine:draw()
-    self.scenes[ self.currentScene ]:draw()
+    sm:draw()
     coin:draw()
 end
 

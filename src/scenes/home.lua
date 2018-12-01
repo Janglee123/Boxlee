@@ -1,4 +1,4 @@
-home = {}
+home =  scene:new()
 
 function home:load()
     self.playFont = love.graphics.newFont('asset/fonts/Quicksand-Regular.ttf', unit*5)

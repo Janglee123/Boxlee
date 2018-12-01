@@ -3,9 +3,9 @@ require 'src/ui/colors'
 local http = require "socket.http"
 local utf8 = require "utf8"
 local bg = require 'src/ui/background'
-
 button = require 'src/ui/button'
 e = require 'src/engine'
+
 function love.load()
     e:load()
     bg:load()
