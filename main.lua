@@ -1,10 +1,10 @@
-require 'src/globles'
-require 'src/ui/colors'
+require 'lib/globles'
+require 'lib/ui/colors'
 local http = require "socket.http"
 local utf8 = require "utf8"
-local bg = require 'src/ui/background'
-button = require 'src/ui/button'
-e = require 'src/engine'
+local bg = require 'lib/ui/background'
+button = require 'lib/ui/button'
+e = require 'lib/engine'
 
 function love.load()
     e:load()

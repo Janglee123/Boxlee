@@ -1,14 +1,14 @@
-require 'src/scene'
+require 'lib/scene'
 sceneManager = {}
 
 function sceneManager:load()
 
     self.scenes = {}
 
-    local files = love.filesystem.getDirectoryItems( 'src/scenes/' );
+    local files = love.filesystem.getDirectoryItems( 'lib/scenes/' );
     for k, file in ipairs(files) do
         sname = string.gsub(file,'.lua','')
-        self.scenes[sname] = require ('src/scenes/'..sname)
+        self.scenes[sname] = require ('lib/scenes/'..sname)
         print(sname);
         self.scenes[sname]:load()
     end

@@ -1,9 +1,8 @@
 --manages scenes and etc
-sm = require 'src/sceneManager'
-coin = require 'src/objects/coin'
-user = require 'src/user'
+sm = require 'lib/sceneManager'
+coin = require 'lib/objects/coin'
+user = require 'lib/user'
 engine = {}
-
 
 function engine:load()
     user:load()

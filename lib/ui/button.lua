@@ -1,4 +1,4 @@
-local event = require 'src/event'
+local event = require 'lib/event'
 button = {}
 
 function dist(x1,y1,x2,y2)

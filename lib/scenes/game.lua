@@ -1,4 +1,4 @@
-event = require 'src/event'
+event = require 'lib/event'
 game = scene:new()
 
 function isBetween(a,b,c)
@@ -6,8 +6,8 @@ function isBetween(a,b,c)
 end
 
 function game:load()
-    self.player = require 'src/objects/player'
-    self.buildings = require 'src/objects/buildings'
+    self.player = require 'lib/objects/player'
+    self.buildings = require 'lib/objects/buildings'
     self.scoreFont = love.graphics.newFont('asset/fonts/Quicksand-Bold.ttf', unit*5)
     self.bgSound = love.audio.newSource("asset/sound/background.ogg","static")
 
