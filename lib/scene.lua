@@ -14,5 +14,3 @@ function scene:update(dt) end
 function scene:onEvent(e) end
 function scene:draw() end
 function scene:reset() end
-
-return scene

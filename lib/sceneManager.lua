@@ -1,9 +1,12 @@
 require 'lib/scene'
+require 'lib/stack'
 sceneManager = {}
 
 function sceneManager:load()
 
     self.scenes = {}
+
+    self.stack = stack:create()
 
     local files = love.filesystem.getDirectoryItems( 'lib/scenes/' );
     for k, file in ipairs(files) do
@@ -25,7 +28,13 @@ function sceneManager:draw()
 end
 
 function sceneManager:changeSceneTo(scene)
+    self.stack:push(scene)
     self.currentScene = scene
+    self.scenes[scene]:reset()
+end
+
+function sceneManager:changeSceneToPrevious()
+    self.currentScene = self.stack:pop()
     self.scenes[scene]:reset()
 end
 
