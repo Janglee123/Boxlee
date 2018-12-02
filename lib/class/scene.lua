@@ -8,7 +8,6 @@ function scene:new()
   return newScene
 end
 
-
 function scene:load() end
 function scene:update(dt) end
 function scene:onEvent(e) end

@@ -1,5 +1,5 @@
-require 'lib/scene'
-require 'lib/stack'
+require 'lib/class/scene'
+require 'lib/class/stack'
 sceneManager = {}
 
 function sceneManager:load()

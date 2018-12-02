@@ -1,8 +1,8 @@
 require 'lib/globles'
 require 'lib/ui/colors'
-local http = require "socket.http"
-local utf8 = require "utf8"
-local bg = require 'lib/ui/background'
+http = require "socket.http"
+utf8 = require "utf8"
+bg = require 'lib/ui/background'
 button = require 'lib/ui/button'
 e = require 'lib/engine'
 
@@ -39,7 +39,7 @@ function love.keypressed(key)
 
     if key == 'return' then
         user:updateName(user.name)
-        changeSceneTo('home')
+        sm:changeSceneTo('home')
         love.keyboard.setTextInput( false )
     end
 
