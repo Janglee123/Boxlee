@@ -9,8 +9,9 @@ function game:load()
     self.player = require 'lib/objects/player'
     self.buildings = require 'lib/objects/buildings'
     self.scoreFont = love.graphics.newFont('asset/fonts/Quicksand-Bold.ttf', unit*5)
-    self.bgSound = love.audio.newSource("asset/sound/background.ogg","static")
-
+    self.bgMusic = love.audio.newSource("asset/sound/background.ogg","static")
+    self.bgMusic:setVolume(0.01)
+    self.bgMusic:setLooping(true)
     self.highscore = user.highscore
     self.player:load()
     self.buildings:load()
@@ -26,7 +27,7 @@ function game:reset()
     self.score = 0
     self.lastBuilding = -1
     self.currentCoin = 0
-
+    self.bgMusic:play()
 end
 
 function game:reswap()
@@ -83,7 +84,7 @@ function game:update(dt)
             love.filesystem.write("hs",self.highscore)
             user:updateHighscore(self.highscore)
         end
-        self.bgSound:stop()
+        self.bgMusic:stop()
         user:updateCoin(self.currentCoin)
         sm:changeSceneTo('restart')
     end
