@@ -53,11 +53,11 @@ function restart:update(dt)
         end
     else
         if self.replaybutton:isPressed() then
-            changeSceneTo('game')
+            sm:changeSceneTo('game')
         end
     end
     if self.homebutton:isPressed() then
-        changeSceneTo('home')
+        sm:changeSceneTo('home')
     end
     self.time = self.time + dt
 

@@ -30,7 +30,7 @@ function store:update(dt)
     end
 
     if self.homebutton:isPressed() then
-        changeSceneTo('home')
+        sm:changeSceneTo('home')
     end
 
 end

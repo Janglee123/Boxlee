@@ -36,15 +36,15 @@ end
 function home:update(dt)
 
     if self.playButton:isPressed() then
-        changeSceneTo('game')
+        sm:changeSceneTo('game')
     end
 
     if self.userButton:isPressed() then
-        changeSceneTo('user')
+        sm:changeSceneTo('user')
     end
 
     if self.storeButton:isPressed() then
-        changeSceneTo('store')
+        sm:changeSceneTo('store')
     end
 
     self.angel = self.angel + dt/4

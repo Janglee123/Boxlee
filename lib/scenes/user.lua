@@ -18,7 +18,7 @@ function setting:update(dt)
     end
     if self.homebutton:isPressed() then
         love.keyboard.setTextInput( false )
-        changeSceneTo('home')
+        sm:changeSceneTo('home')
     end
 
     if self.leaderboard:isPressed() then

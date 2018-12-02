@@ -85,7 +85,7 @@ function game:update(dt)
         end
         self.bgSound:stop()
         user:updateCoin(self.currentCoin)
-        changeSceneTo('restart')
+        sm:changeSceneTo('restart')
     end
 
 end
